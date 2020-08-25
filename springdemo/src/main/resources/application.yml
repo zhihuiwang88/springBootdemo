@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      #你数据库的URL
+      url: jdbc:mysql://localhost:3306/zgdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+      #你数据库的用户名
+      username: root
+      #你数据的密码
+      password: root123
+      initial-size: 5
+      max-active: 10
+      min-idle: 5
+
+mybatis:
+  #XML文件的地址
+  mapper-locations: classpath:mapper/*.xml
+  #映射类文件地址
+  type-aliases-package: com.example.springdemo.pojo
+  configuration:
+    #支持驼峰命名法（很重要）
+    map-underscore-to-camel-case: true
+    
+    
