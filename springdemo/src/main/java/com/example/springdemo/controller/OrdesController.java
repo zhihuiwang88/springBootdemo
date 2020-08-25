@@ -18,7 +18,9 @@ public class OrdesController {
 	@Autowired
 	private OrdesService ordesService;
 	
-	
+	/**
+	* http://localhost:8080/ordes/selectAll
+	*/
 	@GetMapping("/selectAll")
 	@ResponseBody
 	public List<Ordes> findAll() {
